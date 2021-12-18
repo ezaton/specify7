@@ -22,7 +22,7 @@ var userInfo          = require('./userinfo').default;
 const queryText = require('./localization/query').default;
 const formsText = require('./localization/forms').default;
 const commonText = require('./localization/common').default;
-const autocomplete = require('./autocomplete').default;
+const autocomplete = require('./components/autocomplete').default;
 
 var dataobjformat = dataobjformatters.format;
 

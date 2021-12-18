@@ -278,10 +278,6 @@ hr.separator {
     white-space: nowrap;
 }
 
-ul.ui-autocomplete li.ui-menu-item {
-    list-style-type: none;
-}
-
 .specify-subview-header .ui-icon {
     display: inline-block;
 }

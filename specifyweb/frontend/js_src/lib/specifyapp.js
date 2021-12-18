@@ -61,7 +61,6 @@ const commonText = require('./localization/common').default;
         currentView && currentView.remove(); // remove old view
         const main = $('main');
         main.empty();
-        $('.ui-autocomplete').remove(); // these are getting left behind sometimes
         $('.ui-dialog:not(.ui-dialog-no-close)')
             .find('.ui-dialog-content:not(.ui-dialog-persistent)')
             .dialog('close'); // close any open dialogs

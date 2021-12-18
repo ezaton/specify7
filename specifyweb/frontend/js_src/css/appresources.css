@@ -68,8 +68,3 @@
     column-gap: var(--quarter-size);
     flex-wrap: wrap;
 }
-
-.appresource-data .metadata-input,
-.appresource-toolbar input {
-    flex: 1;
-}

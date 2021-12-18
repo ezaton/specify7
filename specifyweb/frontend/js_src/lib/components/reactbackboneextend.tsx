@@ -23,6 +23,7 @@ export default <CONSTRUCTOR_PROPS, BACKBONE_PROPS, COMPONENT_PROPS>({
   moduleName,
   title,
   className,
+  tagName = 'div',
   initialize,
   renderPre,
   remove,
@@ -35,6 +36,7 @@ export default <CONSTRUCTOR_PROPS, BACKBONE_PROPS, COMPONENT_PROPS>({
     | string
     | ((self: ReactBackboneExtendBaseProps<BACKBONE_PROPS>) => string);
   readonly className: string;
+  readonly tagName?: string;
   readonly initialize?: (
     self: ReactBackboneExtendBaseProps<BACKBONE_PROPS>,
     viewProps: CONSTRUCTOR_PROPS
@@ -53,6 +55,7 @@ export default <CONSTRUCTOR_PROPS, BACKBONE_PROPS, COMPONENT_PROPS>({
 }): View =>
   Backbone.View.extend({
     __name__: moduleName,
+    tagName,
     className,
     initialize(props: CONSTRUCTOR_PROPS) {
       initialize?.(this, props);

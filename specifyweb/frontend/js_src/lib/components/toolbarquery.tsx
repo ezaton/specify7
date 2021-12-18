@@ -111,7 +111,18 @@ function QueryList({
     <table className="grid-table list-of-queries">
       <thead>
         <tr>
-          <th scope="col" className="pl-table-icon">
+          <th
+            scope="col"
+            aria-sort={
+              typeof sortConfig === 'undefined' ||
+              sortConfig.sortField !== 'name'
+                ? 'none'
+                : sortConfig.ascending
+                ? 'ascending'
+                : 'descending'
+            }
+            className="pl-table-icon"
+          >
             <button
               type="button"
               className="fake-link list-of-queries-name"
@@ -126,7 +137,17 @@ function QueryList({
               <SortIndicator fieldName="name" sortConfig={sortConfig} />
             </button>
           </th>
-          <th scope="col">
+          <th
+            scope="col"
+            aria-sort={
+              typeof sortConfig === 'undefined' ||
+              sortConfig.sortField !== 'dateCreated'
+                ? 'none'
+                : sortConfig.ascending
+                ? 'ascending'
+                : 'descending'
+            }
+          >
             <button
               type="button"
               className="fake-link list-of-queries-date-created"

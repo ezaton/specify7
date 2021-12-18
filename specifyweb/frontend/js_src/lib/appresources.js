@@ -123,9 +123,9 @@ const ResourceDataView = Backbone.View.extend({
                     $('<h2 class="view-title">').text(this.model.get('name'))
                 ).appendTo(this.el);
 
-                const toolbar = $('<div class="appresource-toolbar" role="toollbar"></div>').appendTo(this.el);
+                const toolbar = $('<div class="appresource-toolbar spacer" role="toollbar"></div>').appendTo(this.el);
 
-                $(`<label class="metadata-input">
+                $(`<label class="metadata-input spacer">
                     ${commonText('metadataInline')}
                     <input type="text" spellcheck="false" autocomplete="on" />
                 <label>`).appendTo(toolbar);

@@ -19,7 +19,7 @@ const remoteprefs  = require('./remoteprefs.js');
 const cookies = require('./cookies.js');
 const treeText = require('./localization/tree').default;
 const commonText = require('./localization/common').default;
-const autocomplete = require('./autocomplete').default;
+const autocomplete = require('./components/autocomplete').default;
 
     var TreeHeader = Backbone.View.extend({
         __name__: "TreeHeader",
