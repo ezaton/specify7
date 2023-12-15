@@ -61,6 +61,14 @@ repos:
       - id: fix-encoding-pragma
       - id: forbid-new-submodules
 
+  - repo: https://github.com/maxpatiiuk/pre-commit
+    rev: v1.0.6
+    hooks:
+      - id: tsc
+      - id: regex-blacklist
+        args:
+          - ~/site/git/dotfiles/git/regex-blacklist.txt
+
   - repo: https://github.com/codespell-project/codespell
     rev: v2.2.6
     hooks:
@@ -69,7 +77,7 @@ repos:
           - --skip="./node_modules/,package-lock.json,./.idea/"
 
   - repo: https://github.com/psf/black
-    rev: 23.11.0
+    rev: 24.1a1
     hooks:
       - id: black
         args:
@@ -110,7 +118,7 @@ repos:
       - id: setup-cfg-fmt
 
   - repo: https://github.com/pre-commit/mirrors-prettier
-    rev: v3.1.0
+    rev: v4.0.0-alpha.5
     hooks:
       - id: prettier
         additional_dependencies:
@@ -144,7 +152,7 @@ repos:
         args:
           - --git-recurse
 
-  - repo: https://github.com/maxxxxxdlp/mirrors-jscpd
+  - repo: https://github.com/maxpatiiuk/mirrors-jscpd
     rev: v3.3.26
     hooks:
       - id: jscpd
